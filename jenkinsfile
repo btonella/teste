@@ -9,12 +9,7 @@ pipeline {
         }
         stage('Send to deploy'){
             steps {
-                script{
-                    if (env.deploy == true) {
-                        echo "entrou"
-                    }
-                    echo "entrou2"
-                }
+                echo "entrou"
             }
         }
     }
