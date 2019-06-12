@@ -13,6 +13,7 @@ pipeline {
                     if (env.deploy == true) {
                         echo "entrou"
                     }
+                    echo "entrou2"
                 }
             }
         }
