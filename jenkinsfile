@@ -4,7 +4,7 @@ pipeline {
         stage('Waiting for approval') {
             steps {
                 echo 'Hello world!' 
-                input message: 'check if deploy', parameters: [booleanParam(defaultValue: false, description: '', name: 'deploy')], submitterParameter: 'deploy'
+                input message: 'approve or deny deploy'
             }
         }
         stage('Send to deploy'){
