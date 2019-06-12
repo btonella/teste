@@ -7,7 +7,7 @@ pipeline {
                 input message: 'approve or deny deploy'
             }
         }
-        stage('Send to deploy'){
+        stage('Sending to deploy'){
             steps {
                 echo "entrou"
                 build job: 'deploy', parameters: [text(name: 'api', value: 'statistics-api')]
@@ -15,4 +15,3 @@ pipeline {
         }
     }
 }
- 
