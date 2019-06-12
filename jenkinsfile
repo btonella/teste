@@ -1,13 +1,13 @@
 pipeline {
     agent any 
     stages {
-        stage('Stage 1') {
+        stage('Waiting for approval') {
             steps {
                 echo 'Hello world!' 
                 input message: 'check if deploy', parameters: [booleanParam(defaultValue: false, description: '', name: 'deploy')], submitterParameter: 'deploy'
             }
         }
-        stage('Stage 2'){
+        stage('Send to deploy'){
             steps {
                 script{
                     if (env.deploy == true) {
