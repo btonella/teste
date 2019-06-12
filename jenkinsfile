@@ -8,9 +8,11 @@ pipeline {
             }
         }
         stage('Stage 2'){
-            script{
-                if (env.deploy == true) {
-                    echo "entrou"
+            steps {
+                script{
+                    if (env.deploy == true) {
+                        echo "entrou"
+                    }
                 }
             }
         }
