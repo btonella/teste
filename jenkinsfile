@@ -7,5 +7,12 @@ pipeline {
                 input message: 'check if deploy', parameters: [booleanParam(defaultValue: false, description: '', name: 'deploy')], submitterParameter: 'deploy'
             }
         }
+        stage('Stage 2'){
+            script{
+                if (env.deploy == true) {
+                    echo "entrou"
+                }
+            }
+        }
     }
 }
