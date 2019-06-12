@@ -10,6 +10,7 @@ pipeline {
         stage('Send to deploy'){
             steps {
                 echo "entrou"
+                build job: 'deploy', parameters: [text(name: 'api', value: 'statistics-api')]
             }
         }
     }
