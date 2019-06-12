@@ -4,7 +4,9 @@ pipeline {
         stage('Stage 1') {
             steps {
                 echo 'Hello world!' 
+                input message: 'Check if ok to deploy', parameters: [booleanParam(defaultValue: false, description: '', name: 'deploy')]
             }
         }
     }
 }
+
